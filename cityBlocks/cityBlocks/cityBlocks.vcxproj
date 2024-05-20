@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CGioco.h" />
+    <ClInclude Include="CMazzo.h" />
     <ClInclude Include="CScacchiera.h" />
     <ClInclude Include="immediate2d.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CGioco.cpp" />
+    <ClCompile Include="CMazzo.cpp" />
     <ClCompile Include="CScacchiera.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>

@@ -21,12 +21,24 @@
     <ClInclude Include="CScacchiera.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="CMazzo.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CGioco.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="CScacchiera.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CMazzo.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CGioco.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
