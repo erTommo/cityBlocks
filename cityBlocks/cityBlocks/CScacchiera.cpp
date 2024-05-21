@@ -1,5 +1,6 @@
 #include "CScacchiera.h"
 #include <string>
+using namespace std;
 
 CScacchiera::CScacchiera()
 {
@@ -27,7 +28,7 @@ void CScacchiera::drawScacchiera()
 		{
 			DrawRectangle((i * 100)+10, (j * 100)+10, 95, 95, Yellow);
 			if (scacchiera[j][i]!=0)
-				DrawString((i * 100) + 10, (j * 100) + 10, "3", "Arial", 70, Black);
+				DrawString((i * 100) + 10, (j * 100) + 10, to_string(scacchiera[j][i]).c_str(), "Arial", 70, Black);
 		}
 	}
 	

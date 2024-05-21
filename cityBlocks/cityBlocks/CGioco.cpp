@@ -3,7 +3,7 @@
 CGioco::CGioco()
 {
 	livelloMax = 1;
-	elementoTemp = 9;
+	elementoTemp = 0;
 }
 
 void CGioco::draw()
@@ -16,9 +16,9 @@ void CGioco::inserisciElementoInScacchiera(int cX, int cY)
 {
 	int x = cX;
 	int y = cY;
-	if (((x <= 550 && x >= 10) && (y <= 550 && y >= 10))&&elementoTemp!=9) {
+	if (((x <= 550 && x >= 10) && (y <= 550 && y >= 10))&&elementoTemp!=0) {
 		scacchiera.inserisciElemento(x, y, elementoTemp);
-		elementoTemp = 9;
+		elementoTemp = 0;
 	}
 
 

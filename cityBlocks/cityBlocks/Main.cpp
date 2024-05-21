@@ -16,8 +16,10 @@ void run() {
 	gioco.draw();
 	if (LeftMousePressed())
 	{
-		gioco.inserisciElementoTemp(850,300);
-		gioco.inserisciElementoInScacchiera(300, 300);
+		int x = MouseX();
+		int y = MouseY();
+		gioco.inserisciElementoTemp(x, y);
+		gioco.inserisciElementoInScacchiera(x, y);
 	}
 
 }
