@@ -29,6 +29,10 @@ void CGioco::inserisciElementoTemp(int cX, int cY)
 	int x = cX;
 	int y = cY;
 	if ((x <= 895 && x >= 800) && (y <= 310 && y >= 10))
-		elementoTemp = mazzoNuoviElementi.prelevaElemento(y);
+		elementoTemp = mazzoNuoviElementi.prelevaElemento(y/100);
 
+}
+
+void CGioco::controllo(int x, int y)
+{
 }

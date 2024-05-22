@@ -6,7 +6,7 @@ CMazzo::CMazzo()
 	srand(time(NULL));
 	for (int i = 0; i < MAX_MAZZO; i++)
 	{
-		mazzo[i] = rand() % 2;
+		mazzo[i] = 1;
 	}
 }
 
