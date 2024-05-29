@@ -35,14 +35,5 @@ void CGioco::inserisciElementoTemp(int cX, int cY)
 
 void CGioco::controllo(int x, int y)
 {
-	for (int i = 0; i < 3; i+=2)
-	{
-		for (int i = 0; i < 3; i+=2)
-		{
-			if (scacchiera.)
-			{
-
-			}
-		}
-	}
+	scacchiera.controllo(x, y, 2 );
 }

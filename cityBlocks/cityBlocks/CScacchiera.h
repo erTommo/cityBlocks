@@ -11,6 +11,6 @@ public:
 	CScacchiera();
 	void inserisciElemento(int x, int y, int elemento);
 	void drawScacchiera();
-
+	void controllo(int x, int y, int layer);
 };
 

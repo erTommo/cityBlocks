@@ -33,3 +33,22 @@ void CScacchiera::drawScacchiera()
 	}
 	
 }
+
+void CScacchiera::controllo(int x, int y, int layer)
+{
+	if (layer > 0)
+	{
+		if ((scacchiera[x][y] == scacchiera[x + 1][y]) && (x + 1) <= MAX_RIGHE) {
+			controllo(x + 1, y, layer - 1);
+		}
+		if (scacchiera[x][y] == scacchiera[x][y + 1] && (y + 1) <= MAX_COLONNE) {
+			controllo(x, y + 1, layer - 1);
+		}
+		if (scacchiera[x][y] == scacchiera[x - 1][y] && (x - 1) <= MAX_RIGHE) {
+			controllo(x - 1, y, layer - 1);
+		}
+		if (scacchiera[x][y] == scacchiera[x][y - 1] && (y - 1) <= MAX_COLONNE) {
+			controllo(x, y - 1, layer - 1);
+		}
+	}
+}
