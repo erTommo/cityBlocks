@@ -8,7 +8,6 @@ class CGioco
 private:
 	CScacchiera scacchiera;
 	CMazzo mazzoNuoviElementi;
-	int livelloMax;
 	int elementoTemp;
 public:
 	CGioco();

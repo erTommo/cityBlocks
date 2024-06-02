@@ -2,7 +2,6 @@
 
 CGioco::CGioco()
 {
-	livelloMax = 1;
 	elementoTemp = 0;
 }
 
