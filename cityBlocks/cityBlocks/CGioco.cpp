@@ -19,8 +19,9 @@ void CGioco::inserisciElementoInScacchiera(int cX, int cY)
 	if (((x <= 550 && x >= 10) && (y <= 550 && y >= 10))&&elementoTemp!=0) {
 		scacchiera.inserisciElemento(x, y, elementoTemp);
 		elementoTemp = 0;
+		controllo(x, y);
+		controllo(x, y);
 	}
-
 
 }
 
@@ -29,11 +30,16 @@ void CGioco::inserisciElementoTemp(int cX, int cY)
 	int x = cX;
 	int y = cY;
 	if ((x <= 895 && x >= 800) && (y <= 310 && y >= 10))
-		elementoTemp = mazzoNuoviElementi.prelevaElemento(y/100);
+	{
+		elementoTemp = mazzoNuoviElementi.prelevaElemento(y / 100);
+		mazzoNuoviElementi.setNuovoElemento(y / 100);
+	}
 
 }
 
 void CGioco::controllo(int x, int y)
 {
-	scacchiera.controllo(x, y, 2 );
+	scacchiera.controllo((x / 100), (y/100), 2);
+	scacchiera.sostituzioneCasette((x / 100), (y / 100));
+	mazzoNuoviElementi.setMaxValori(scacchiera.getElemento((x / 100), (y / 100)));
 }

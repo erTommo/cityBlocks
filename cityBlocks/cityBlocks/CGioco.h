@@ -16,5 +16,6 @@ public:
 	void inserisciElementoInScacchiera(int cX, int cY);
 	void inserisciElementoTemp(int cX, int cY);
 	void controllo(int x, int y);
+	
 };
 
