@@ -4,12 +4,15 @@
 #define MAX_COLONNE 5
 #define MAX_ELL 20
 
+#include "CPunteggio.h"
+
 class CScacchiera
 {
 private:
 	int scacchiera[MAX_RIGHE][MAX_COLONNE];
 	int XCasette[MAX_ELL];
 	int YCasette[MAX_ELL];
+	CPunteggio punteggio;
 	int limite;
 public:
 	CScacchiera();
@@ -19,5 +22,6 @@ public:
 	void sostituzioneCasette(int x, int y);
 	void inizializzaVetCasette();
 	int getElemento(int x, int y);
+	int getPunteggio();
 };
 

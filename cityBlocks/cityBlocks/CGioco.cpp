@@ -11,6 +11,14 @@ void CGioco::draw()
 	mazzoNuoviElementi.drawMazzo();
 }
 
+void CGioco::drawFine()
+{
+	DrawString(500, 120, "game over", "Arial", 100, Yellow,true);
+	DrawString(500, 350, "score:", "Arial", 30, Yellow, true);
+	DrawString(500, 400, to_string(scacchiera.getPunteggio()).c_str(), "Arial", 30, Yellow, true);
+
+}
+
 void CGioco::inserisciElementoInScacchiera(int cX, int cY)
 {
 	int x = cX;
@@ -21,9 +29,7 @@ void CGioco::inserisciElementoInScacchiera(int cX, int cY)
 		mazzoNuoviElementi.inserisciMazzo();
 		for (int i = 0; i < MAX_CAMBI; i++)
 			controllo(x, y);
-		
 	}
-
 }
 
 void CGioco::inserisciElementoTemp(int cX, int cY)
@@ -55,6 +61,7 @@ void CGioco::inserimentoMazzo()
 		
 
 }
+
 
 bool CGioco::fineGioco()
 {

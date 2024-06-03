@@ -15,6 +15,7 @@ CScacchiera::CScacchiera()
 	}
 	inizializzaVetCasette();
 	limite = 0;
+	
 }
 
 void CScacchiera::inserisciElemento(int x, int y, int elemento)
@@ -30,10 +31,10 @@ void CScacchiera::drawScacchiera()
 		{
 			DrawRectangle((i * 100)+10, (j * 100)+10, 95, 95, Yellow);
 			if (scacchiera[j][i]!=0)
-				DrawString((i * 100) + 10, (j * 100) + 10, to_string(scacchiera[j][i]).c_str(), "Arial", 70, Black);
+				DrawString((i * 100) + 10, (j * 100) + 10, to_string(scacchiera[j][i]).c_str(), "Arial", 50, Black);
 		}
 	}
-	
+	punteggio.drawPunteggio();
 }
 
 void CScacchiera::controllo(int x, int y, int layer)
@@ -79,8 +80,9 @@ void CScacchiera::sostituzioneCasette(int x, int y)
 			if (YCasette[i] != y || XCasette[i] != x)
 				scacchiera[YCasette[i]][XCasette[i]] = 0;
 		}
-		
+		punteggio.setPunteggio(scacchiera[y][x]);
 	}
+	
 	inizializzaVetCasette();
 	limite = 0;
 }
@@ -97,6 +99,11 @@ void CScacchiera::inizializzaVetCasette()
 int CScacchiera::getElemento(int x, int y)
 {
 	return scacchiera[y][x];
+}
+
+int CScacchiera::getPunteggio()
+{
+	return punteggio.getPunteggio();
 }
 
 
