@@ -98,3 +98,5 @@ int CScacchiera::getElemento(int x, int y)
 {
 	return scacchiera[y][x];
 }
+
+

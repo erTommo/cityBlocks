@@ -13,7 +13,7 @@ CGioco gioco;
 void run() {
 	UseDoubleBuffering(true);
 	
-	while (true)
+	while (gioco.fineGioco())
 	{
 		Present();
 		gioco.draw();
@@ -23,6 +23,8 @@ void run() {
 			int y = MouseY();
 			gioco.inserisciElementoTemp(x, y);
 			gioco.inserisciElementoInScacchiera(x, y);
+			gioco.inserimentoMazzo();
 		}
+
 	}
 }
